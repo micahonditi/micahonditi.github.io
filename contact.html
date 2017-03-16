@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
 <style>
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
 
+input[type=send] {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border: 5px solid black;
+    cursor: pointer;
+}
 
+input[type=send]:hover {
+    background-color: #ffbb00;
+}
 
- </style>
-<h1>
-Contact Me!
-</h1>
+.container {
+    background-color: #b3ecfc;
+    padding: 25px;
+}
 
-<h2>
-Lorum Ipsum
-</h2>
-
-</header>
-
+h3 {
+background-color: red;
+text-align: center;
+}
+</style>
+</head>
 <body>
-<img src="/images/vball.jpg" alt="Volleyball" style="width:200px;height:200px;">
-<img src="/images/stocks.jpg" alt="Stock Market" style="width:200px;height:200px;">
 
+<h3>Let's Talk!</h3>
 
-<p>
-  Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Donec sit amet rutrum felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent a metus neque. Cras in fermentum mi. Donec bibendum ipsum ipsum, sit amet commodo ligula iaculis ac. Phasellus tristique condimentum magna bibendum volutpat. Quisque hendrerit interdum mauris, nec finibus eros maximus ut. In pellentesque, orci quis egestas pretium, ante nulla scelerisque elit, sed semper risus dolor sit amet urna. Donec nec aliquet leo. Quisque pellentesque dui sed ante euismod commodo. Sed iaculis dolor nec est fermentum, luctus porta nulla vehicula. Duis sit amet lorem augue. 
- </p>
-     
-     
-<img src="/images/bowling.jpg" alt="Bowling" style="width:200px;height:200px;">
-<img src="/images/volunteer.jpg" alt="Volunteer" style="width:200px;height:200px;">
+<div class="container">
+  <form action="/action_page.php">
+    <label for="first">First Name</label>
+    <input type="text" id="first" name="firstname" placeholder="Please Enter Your First Name...">
 
-      
+    <label for="last">Last Name</label>
+    <input type="text" id="last" name="lastname" placeholder="Please Enter Your Last Name...">
+
+    <label for="state">State</label>
+    <select id="state" name="state">
+      <option value="NJ">New Jersey</option>
+      <option value="NY">New York</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="MA">Massachusetts</option>
+      <option value="DE">Delaware</option>
+      <option value="RI">Rhode Island</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="What Would You Like To Say?" style="height:300px"></textarea>
+
+    <input type="send" value="Send">
+  </form>
+</div>
+
 </body>
 </html>
