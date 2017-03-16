@@ -12,8 +12,7 @@ body {
     
     
 }
-
-.pull {
+.overlay {
     height: 0%;
     width: 100%;
     position: fixed;
@@ -25,47 +24,40 @@ body {
     overflow-y: hidden;
     transition: 1.0s;
 }
-
-.pull-content {
+.overlay-content {
     position: relative;
     top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
-
-.pull a {
+.overlay a {
     padding: 8px;
     font-size: 36px;
     color: white;
     display: block;
-    transition: 1.0s;
+    transition: 0.3s;
 }
-
-.pull a:hover {
+.overlay a:hover {
     color: #ffbb00;
 }
-
-.pull .closebtn {
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
 }
-
-
-
 </style>
 </head>
 
 <body>
 
-<div id="menu" class="pull">
+<div id="myNav" class="overlay">
 
   <a href="#leave" class="closebtn"
-  onclick="closeMenu()">&times;</a>
+  onclick="closeNav()">&times;</a>
   
-  <div class="pull-content">
+  <div class="overlay-content">
     <a href="about.html"
     	target= "_blank" > About Me</a>
     <a href="/images/Winter_16_Resume.pdf" 
@@ -80,17 +72,14 @@ body {
 </div>
 
 
-<span style="font-size:30px;cursor:pointer" onclick="openMenu()"> Click Me!</span>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"> Click Me!</span>
 
 <script>
-
-
 function openNav() {
-    document.getElementById("menu").style.height = "100%";
+    document.getElementById("myNav").style.height = "100%";
 }
-
 function closeNav() {
-    document.getElementById("menu").style.height = "0%";
+    document.getElementById("myNav").style.height = "0%";
 }
 </script>
      
